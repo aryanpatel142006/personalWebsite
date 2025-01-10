@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: "intervogue-bold";
+    src: url("fonts/Fontspring-DEMO-intervogue-bold.otf") format("OpenType");
+}
+
+body {
+    /*background-color: #051723; FINAL!!! */
+    
+    
+    background-color:  #051723;
+    
+    
+    background: linear-gradient(#000000,#051723);
+    height: 100vh;
+    /* background: linear-gradient(#051723,#C0C0C0);
+    height: 100vb; */
+}
+/* NAVBAR */
+
+.navbar{
+    display: flex;
+    /* justify-content: left; */
+    border-bottom: 2px solid white;
+    height: 120px;
+    width: 100vw;
+    color: white;
+}
+
+    /* Logo */
+.logo{
+    display: flex;
+    align-items: center;
+    height: 8rem;
+    width: 8rem;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+}
+
+    /* navbar-main */
+.navbar-main {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+    width: 100%;
+
+    font-family: "intervogue-bold";
+    font-size: 1.5rem;
+    font-weight: bold;
+}
