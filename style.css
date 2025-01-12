@@ -14,33 +14,42 @@
 
 body {
     /*background-color: #051723; FINAL!!! */
-    
-    
     background-color:  #051723;
-    
-    
-    background: linear-gradient(#000000,#051723);
+    /* background: linear-gradient(#000000,#051723); */
     height: 100vh;
     /* background: linear-gradient(#051723,#C0C0C0);
     height: 100vb; */
+}
+
+.gradient{
+    background: linear-gradient(#000000,#051723);
+    position: relative;
+    background-color: pink;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
 }
 /* NAVBAR */
 
 .navbar{
     display: flex;
+    position: fixed;
     /* justify-content: left; */
     border-bottom: 2px solid white;
     height: 120px;
     width: 100vw;
     color: white;
+    background-color: black;
 }
 
     /* Logo */
 .logo{
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 8rem;
     width: 8rem;
+    /* background-color: aqua; */
 }
 
 .logo img{
@@ -50,13 +59,23 @@ body {
 
     /* navbar-main */
 .navbar-main {
+    /* background-color: pink; */
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: space-evenly;
     height: 100%;
     width: 100%;
-
     font-family: "intervogue-bold";
     font-size: 1.5rem;
     font-weight: bold;
+    
+}
+
+.navbar-main a{
+    text-decoration: none;
+    color: whitesmoke;    
+}
+
+#First{
+    margin-left: 30%;
 }
