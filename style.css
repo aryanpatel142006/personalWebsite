@@ -66,13 +66,14 @@ body {
 
 .logo img{
     height: 100%;
-    width: 100%;
+    width: auto;
 }
 
     /* navbar-main */
 .navbar-main {
     /* background-color: pink; */
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
@@ -102,17 +103,19 @@ body {
 } */
 .main-content{
     display: flex;
-    /* background-color: aqua; */
+    background-color: aqua;
     height: 70vh;
-    /* margin-top: 1rem; */
+
+    /* margin-top: 7rem; */
 
 }
 
 .main-left {
+    background-color: pink;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: pink; */
+    
     height: 100%;
     width: 40%;
 }
@@ -130,7 +133,8 @@ body {
 
 .main-left img{
     /* height: 0.5; */
-    height: 30rem;
+    max-height: auto;
+    max-width: 100%;
     /* background-color: aqua; */
 }
 
@@ -164,12 +168,15 @@ body {
     font-family: "CaveatBrush-Regular";
     font-size: 3rem;
     color: #C0C0C0;
+    width: 100%;
+    height: auto;
     /* background-color: red; */
 }
 
 .content p{
     /* background-color: pink; */
     display: inline;
+    font-size: 1em;
 }
 
 /* hi emoji */
@@ -223,9 +230,12 @@ body {
 
 
 .quote-content {
+    background-color: #3F4752;
+    display: flex;
+    flex-wrap: wrap;
     height: 4rem;
     width: 90vw;
-    margin-top: 1rem;
+    margin-top: 2.3rem;
     background-color: #3F4752;
     color: #19AFFF;
     display: flex;
@@ -234,9 +244,10 @@ body {
     border-radius: 1rem; 
     font-size: 1.5rem;  
     font-weight: bold;
+
 }
 
-.quote-content:hover p{
+.quote-content:hover .highlight{
         height: 2rem;
         border-radius: 0.3rem;
         background-color:#19AFFF;
