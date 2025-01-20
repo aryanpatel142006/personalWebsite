@@ -109,6 +109,9 @@ body {
 } */
 .main-content{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     background-color: aqua;
     min-height: 70vh;
 
@@ -119,11 +122,15 @@ body {
 .main-left {
     background-color: pink;
     display: flex;
-    justify-content: center;
+    justify-content: base;
     align-items: center;
+    margin-inline: 2rem;
+    max-width: 36rem;
+    /* max-height: 24rem; */
+    /* max-height:36rem; */
     
-    height: 100%;
-    width: 40%;
+    /* height: 100%; */
+    /* max-width: 40%; */
 }
 
 /* .profile-image {
@@ -139,13 +146,13 @@ body {
 
 .main-left img{
     /* height: 0.5; */
-    max-height: auto;
-    max-width: 95%;
+    height: 80%;
+    width: 90%;
     /* background-color: aqua; */
 }
 
 .main-right {
-    /* background-color:burlywood; */
+    background-color:burlywood;
     /* display: flex; */
     /* justify-content: center; */
     /* align-items: left;
@@ -154,7 +161,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 60%;
+    max-width: 50%;
 }
 
 .main-right img {
