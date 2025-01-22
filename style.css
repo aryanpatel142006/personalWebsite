@@ -303,12 +303,12 @@ body {
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
     box-shadow: 10px white;
-    margin-top: 5rem;
+    margin-top: 6rem;
     /* margin-bottom: opx; */
     background-color: #19AFFF;
     z-index: -5;
     /* flex-wrap: wrap; */
-    justify-content: ;
+    justify-content: center;
 }
 
 .timeline-wrapper h1 {
@@ -351,7 +351,6 @@ body {
     margin-bottom: 30px;
     background: #FFF;
 }
-
 .timeline-box-arrow-education {
     transform: rotate(45deg);
     content: '';
