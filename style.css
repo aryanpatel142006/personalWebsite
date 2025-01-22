@@ -32,7 +32,6 @@ body {
 
 .gradient{
     /* background-color: pink; */
-
     background: linear-gradient(#000000,#051723);
     position: absolute;
     height: 100vh;
@@ -53,6 +52,7 @@ body {
     color: white;
     background-color: black;
 }
+
 
     /* Logo */
 .logo{
@@ -82,7 +82,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: right;
     height: 100%;
     width: 100%;
     font-family: "Sriracha-Regular";
@@ -94,10 +94,16 @@ body {
 .navbar-main a{
     text-decoration: none;
     color: whitesmoke;    
+    padding-inline: 1rem;
+
+}
+
+.navbar-main a:hover {
+    color: #19AFFF; /* Highlight color */
 }
 
 #First{
-    margin-left: 30%;
+    /* margin-left: 30%; */
 }
 
 
@@ -127,6 +133,8 @@ body {
     align-items: center;
     margin-inline: 2rem;
     max-width: 36rem;
+    /* object-fit: cover; */
+
     /* max-height: 24rem; */
     /* max-height:36rem; */
     
@@ -149,6 +157,7 @@ body {
     /* height: 0.5; */
     height: 80%;
     width: 90%;
+    /* object-fit: cover; */
     /* background-color: aqua; */
 }
 
@@ -274,6 +283,7 @@ body {
         align-items: center;
         height: 2rem;
         border-radius: 0.3rem;
+        font-weight: bolder;
         background-color:#19AFFF;
         color: #3F4752;
     
@@ -283,3 +293,213 @@ body {
     height: 6rem;
 } */
 
+
+
+/* Education TIMELINE */
+
+.timeline-wrapper{
+    min-height: 60rem;
+    width: 100%;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    box-shadow: 10px white;
+    margin-top: 5rem;
+    /* margin-bottom: opx; */
+    background-color: #19AFFF;
+    z-index: -5;
+    /* flex-wrap: wrap; */
+    justify-content: ;
+}
+
+.timeline-wrapper h1 {
+    text-align: center;
+    display: block;
+    font-size: 3em;
+    /* background-color: pink; */
+    /* height: fit-content; */
+    padding: 1.5em;
+    /* margin-bottom: 2em; */
+}
+
+.timeline-content-box, .education-timeline-content-box{
+    display: flex;
+    flex-wrap: nowrap;
+    /* margin-top: 0px;
+    margin-bottom: 0px; */
+    justify-content: center;
+    /* background-color: black; */
+}
+
+@media (max-width: 800px){
+    .education-timeline-content-box {
+            flex-wrap: wrap;
+    }
+}
+
+
+.timeline-box {
+    display: flex;
+    height: fit-content;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.04);
+    border: 5px solid #051723;
+    border-radius: 10px;
+    margin: 20px 10px 10px 10px;
+    padding: 10px;
+    width: 90%;
+    float: left;
+    /* z-index: 1; */
+    margin-bottom: 30px;
+    background: #FFF;
+}
+
+.timeline-box-arrow-education {
+    transform: rotate(45deg);
+    content: '';
+    display: block;
+    background: #FFF;
+    border: 2px solid black;
+    /* border-left: 5px solid #051723;
+    border-bottom: 5px solid #051723; */
+    float: left;
+    height: 29px;
+    width: 39px;
+    margin-top: 28px;
+    margin-left: -22px;
+    z-index: 0;
+}
+
+
+
+
+/* Experience TIMELINE */
+
+/* 
+
+
+.timeline-box {
+    display: flex;
+    height: fit-content;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.04);
+    border: 5px solid #051723;
+    border-radius: 10px;
+    margin: 20px 10px 10px 10px;
+    padding: 10px;
+    width: 90%;
+    float: left;
+    z-index: 1;
+    margin-bottom: 30px;
+    background: #FFF;
+}
+
+.timeline-box-arrow {
+    transform: rotate(37deg);
+    content: '';
+    display: block;
+    background: #FFF;
+    border-left: 5px solid #051723;
+    border-bottom: 5px solid #051723;
+    float: left;
+    height: 20px;
+    margin-top: 28px;
+    margin-left: -22px;
+    width: 29px;
+    z-index: 0;
+}
+ */
+
+
+
+
+
+
+
+
+
+/* Container for education windows */
+.education-container {
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 20px;
+    background-color: #19AFFF;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+/* Styling for each education "window" */
+.education-window {
+    height: fit-content;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+/* Header of the window with controls */
+.education-window-header {
+    background: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+/* Controls buttons for close, minimize, maximize */
+.education-window-controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* Generic button style for the controls */
+.education-window-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #d1d1d1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effects for the buttons */
+.education-window-btn:hover {
+    background-color: #5e5e5e;
+}
+
+/* Specific button styles for close, minimize, and maximize */
+.education-window-btn.close-btn {
+    background-color: #f28d8d; /* Red */
+}
+
+.education-window-btn.minimize-btn {
+    background-color: #f2cc4d; /* Yellow */
+}
+
+.education-window-btn.maximize-btn {
+    background-color: #4dd1a1; /* Green */
+}
+
+/* Title of the window (degree name) */
+.education-window-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Content section of the window */
+.education-window-content {
+    padding: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Paragraphs inside the content */
+.education-window-content p {
+    margin-bottom: 10px;
+}
