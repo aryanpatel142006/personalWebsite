@@ -24,9 +24,8 @@
 body {
     /*background-color: #051723; FINAL!!! */
     background-color:  #051723;
-    /* background: linear-gradient(#051723,#19AFFF,) !important; */
     /* background: linear-gradient(#000000,#051723); */
-    /* height:100vh; */
+    height: 100vh;
     /* background: linear-gradient(#051723,#C0C0C0);
     height: 100vb; */
 }
@@ -108,24 +107,9 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* HOME */
 
 /* main */
-
 
 /* main{
     display: flex;
@@ -267,7 +251,7 @@ body {
 }
 
 .quote {
-    /* height: 4rem; */
+    height: 4rem;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -311,91 +295,26 @@ body {
 
 
 
-
-.aboutMeWrapper{
-    /* background-color: pink; */
-    display: flex;
-    margin-top: 2em;
-    /* flex-wrap: wrap; */
-}
-
-.aboutMeWrapper h1{
-    display: block;
-    text-align: center;
-    /* background-color: cyan; */
-    padding: 1.5em;
-    color: #C0C0C0;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 3em;
-}
-
-.aboutMeContent{
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-    /* background-color: #000000; */
-    padding: 1em;
-    /* padding-inline: 10em; */
-}
-.aboutMeWrapper p{
-    color: #19AFFF;
-    padding:10px;
-    font-family: Sriracha-Regular;
-
-}
-
-
-@media (max-width: 800px){
-    .aboutMeWrapper {
-            flex-wrap: wrap;
-            justify-content: center;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.educationExperienceTimeline{
-    /* background:linear-gradient(#051723,#19AFFF) */
-
-}
-
-
 /* Education TIMELINE */
 
 .timeline-wrapper{
-    /* min-height: 60rem; */
-    /* width: 100%; */
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
+    min-height: 60rem;
+    width: 100%;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
     box-shadow: 10px white;
-    /* margin-top: 3rem; */
+    margin-top: 6rem;
     /* margin-bottom: opx; */
-    /* background-color: #19AFFF; */
-    /* background-color: rgba(25,175,255,0.5); */
-    /* background-color: #00A9E0; */
-    /* z-index: -5; */
+    background-color: #19AFFF;
+    z-index: -5;
     /* flex-wrap: wrap; */
     justify-content: center;
-    background-color: transparent;
 }
 
 .timeline-wrapper h1 {
     text-align: center;
     display: block;
     font-size: 3em;
-    color: #C0C0C0;
     /* background-color: pink; */
     /* height: fit-content; */
     padding: 1.5em;
@@ -409,13 +328,8 @@ body {
     margin-bottom: 0px; */
     justify-content: center;
     /* background-color: black; */
-    background-color: transparent;
 }
 
-
-.education-timeline-content-box{
-
-}
 @media (max-width: 800px){
     .education-timeline-content-box {
             flex-wrap: wrap;
@@ -458,36 +372,61 @@ body {
 
 /* Experience TIMELINE */
 
-.education-timeline{
-    background-color: #19AFFF;
-    border-radius: 2rem;
-    border: 2px solid white;
-    padding-bottom: 10%;
-    background-color: transparent;
+/* 
+
+
+.timeline-box {
+    display: flex;
+    height: fit-content;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.04);
+    border: 5px solid #051723;
+    border-radius: 10px;
+    margin: 20px 10px 10px 10px;
+    padding: 10px;
+    width: 90%;
+    float: left;
+    z-index: 1;
+    margin-bottom: 30px;
+    background: #FFF;
 }
-.education-timeline h1{
-    /* background-color: pink; */
-    font-size: 3em;
-    /* margin-top: 3rem; */
-    padding: 1.5em;
-    text-align: center;
+
+.timeline-box-arrow {
+    transform: rotate(37deg);
+    content: '';
     display: block;
+    background: #FFF;
+    border-left: 5px solid #051723;
+    border-bottom: 5px solid #051723;
+    float: left;
+    height: 20px;
+    margin-top: 28px;
+    margin-left: -22px;
+    width: 29px;
+    z-index: 0;
 }
-/* Container for expereience windows */
+ */
 
 
+
+
+
+
+
+
+
+/* Container for education windows */
 .education-container {
-    /* height: 800px; */
+    height: 800px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     /* flex-direction: column; */
     gap: 20px;
-    
-
+    background-color: #19AFFF;
+    border-radius: 5px;
+    border: 2px solid white;
 }
-
 
 /* Styling for each education "window" */
 .education-window {
@@ -562,187 +501,4 @@ body {
 /* Paragraphs inside the content */
 .education-window-content p {
     margin-bottom: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-/* _____________________________________________________________________________________ */
-
-
-
-
-
-
-
-
-
-/* Education Window */
-
-.education-window {
-    background: linear-gradient(135deg, #051723, #19AFFF); /* Gradient background */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
-    width: 300px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 30px;
-    position: relative;
-    font-family: "CaveatBrush-Regular", sans-serif;
-    color: #fff;
-}
-
-/* On hover, scale up the window and add a stronger shadow */
-.education-window:hover {
-    transform: scale(1.05); /* Slight zoom-in on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
-}
-
-/* Header of the window */
-.education-window-header {
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-    padding: 12px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Sriracha-Regular", sans-serif; /* Cool handwritten font */
-    font-size: 1.1rem;
-}
-
-/* Title styling */
-.education-window-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    flex-grow: 1;
-}
-
-/* Controls buttons for close, minimize, maximize */
-.education-window-controls {
-    display: flex;
-    gap: 10px;
-}
-
-/* Button style */
-.education-window-btn {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Hover effect for control buttons */
-.education-window-btn:hover {
-    background-color: #fff;
-}
-
-/* Close button (Red) */
-.education-window-btn.close-btn {
-    background-color: #f28d8d;
-}
-
-/* Minimize button (Yellow) */
-.education-window-btn.minimize-btn {
-    background-color: #f2cc4d;
-}
-
-/* Maximize button (Green) */
-.education-window-btn.maximize-btn {
-    background-color: #4dd1a1;
-}
-
-/* Content section of the window */
-.education-window-content {
-    padding: 20px;
-    font-size: 16px;
-    color: #C0C0C0; /* Light gray for content */
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background for content */
-    transition: background-color 0.3s ease;
-}
-
-/* On hover, make content background more prominent */
-.education-window:hover .education-window-content {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Add a slight blur effect when the window is hovered */
-.education-window:hover .education-window-title {
-    filter: blur(1px);
-}
-
-/* Paragraphs inside the content */
-.education-window-content p {
-    margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-/* For better readability, let's make sure the content section has a bit of spacing */
-.education-window-content p:last-child {
-    margin-bottom: 0;
-}
-
-/* Button inside content to make it more interactive */
-.education-window-content button {
-    padding: 8px 16px;
-    background-color: #19AFFF;
-    border: none;
-    color: #051723;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.education-window-content button:hover {
-    background-color: #051723!important;
-    color: #19AFFF !important;
-}
-
-/* Adjusting the controls (close, minimize, etc.) for smaller screens */
-@media (max-width: 600px) {
-    .education-window-header {
-        padding: 10px 12px;
-    }
-
-    .education-window-btn {
-        width: 12px;
-        height: 12px;
-    }
-
-    .education-window-title {
-        font-size: 14px;
-    }
-
-    .education-window-content {
-        padding: 15px;
-        font-size: 14px;
-    }
-}
-
-
-.education-window-content button {
-    background-color: #f1f1f1; /* Light background by default */
-    color: #333; /* Dark text color by default */
-    padding: 10px 20px; /* Adjust padding for button */
-    border: none; /* Remove default border */
-    border-radius: 8px; /* Slightly rounded corners */
-    font-size: 16px; /* Standard font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: all 0.3s ease; /* Smooth transition effect */
-}
-
-.education-window-content button:hover {
-    background-color: #051723; /* Dark background when hovered */
-    color: #19AFFF; /* Bright cyan text when hovered */
-    transform: scale(1.05); /* Slight scaling effect on hover */
 }
