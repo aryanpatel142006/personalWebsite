@@ -368,8 +368,11 @@ body {
 
 .educationExperienceTimeline{
     /* background:linear-gradient(#051723,#19AFFF) */
+    /* background-color: #F8F9FA; */
+    /* background-color:  #E8F0FF; */
 
 }
+
 
 
 /* Education TIMELINE */
@@ -457,6 +460,14 @@ body {
 
 
 /* Experience TIMELINE */
+
+.education-timeline{
+    /* background:linear-gradient(#051723,#19AFFF) */
+    /* background-color: #F8F9FA !important; */
+    /* background-color:#E8F0FF !important; */
+
+}
+
 
 .education-timeline{
     background-color: #19AFFF;
