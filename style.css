@@ -120,12 +120,20 @@ body {
 
 
 
-
-
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
 /* HOME */
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
+/*  */
 
+
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
 /* main */
-
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
 
 /* main{
     display: flex;
@@ -373,9 +381,14 @@ body {
 
 }
 
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
 
 
 /* Education TIMELINE */
+
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
 
 .timeline-wrapper{
     /* min-height: 60rem; */
@@ -391,7 +404,7 @@ body {
     /* z-index: -5; */
     /* flex-wrap: wrap; */
     justify-content: center;
-    background-color: transparent;
+    
 }
 
 .timeline-wrapper h1 {
@@ -406,13 +419,16 @@ body {
 }
 
 .timeline-content-box, .education-timeline-content-box{
+    margin-inline: 2.5%;
+    border-radius: 12px;
+    padding-inline: 10px;
     display: flex;
     flex-wrap: nowrap;
     /* margin-top: 0px;
     margin-bottom: 0px; */
     justify-content: center;
     /* background-color: black; */
-    background-color: transparent;
+    background-color: #19AFFF;
 }
 
 
@@ -457,34 +473,15 @@ body {
 }
 
 
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
 
 
 /* Experience TIMELINE */
 
-.education-timeline{
-    /* background:linear-gradient(#051723,#19AFFF) */
-    /* background-color: #F8F9FA !important; */
-    background-color:#E8F0FF !important;
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
 
-}
-
-
-.education-timeline{
-    background-color: #19AFFF;
-    border-radius: 2rem;
-    border: 2px solid white;
-    padding-bottom: 10%;
-    background-color: transparent;
-}
-.education-timeline h1{
-    /* background-color: pink; */
-    font-size: 3em;
-    /* margin-top: 3rem; */
-    padding: 1.5em;
-    text-align: center;
-    display: block;
-}
-/* Container for expereience windows */
 
 
 .education-container {
@@ -495,106 +492,93 @@ body {
     align-items: center;
     /* flex-direction: column; */
     gap: 20px;
-    
-
 }
-
-
-/* Styling for each education "window" */
-.education-window {
-    height: fit-content;
+.education-main-window {
+    margin-inline: 5%;
+    /* width: 90%; */
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    overflow: hidden;
+    /* overflow: hidden; */
     border: 1px solid #ccc;
 }
 
-/* Header of the window with controls */
-.education-window-header {
+
+.education-main-window-header {
+    border-radius: 12px;
     background: #f1f1f1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-/* Controls buttons for close, minimize, maximize */
-.education-window-controls {
+.education-main-window-controls {
     display: flex;
     gap: 10px;
 }
 
-/* Generic button style for the controls */
-.education-window-btn {
-    width: 12px;
-    height: 12px;
+.education-main-window-btn {
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    background-color: #d1d1d1;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-/* Hover effects for the buttons */
-.education-window-btn:hover {
-    background-color: #5e5e5e;
-}
 
-/* Specific button styles for close, minimize, and maximize */
-.education-window-btn.close-btn {
+
+.education-main-window-btn.close-btn {
     background-color: #f28d8d; /* Red */
 }
 
-.education-window-btn.minimize-btn {
+.education-main-window-btn.minimize-btn {
     background-color: #f2cc4d; /* Yellow */
 }
 
-.education-window-btn.maximize-btn {
+.education-main-window-btn.maximize-btn {
     background-color: #4dd1a1; /* Green */
 }
 
-/* Title of the window (degree name) */
-.education-window-title {
-    font-size: 14px;
+
+.education-main-window-btn:hover {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #5e5e5e;
+    /* border-radius: 0px; */
+}
+
+
+.education-main-window-title {
+    font-size: 3rem;
     font-weight: bold;
     color: #333;
     flex-grow: 1;
     text-align: center;
 }
 
-/* Content section of the window */
-.education-window-content {
+
+.education-main-window-content {
+    /* background-color: #E8F0FF; */
+    background-color: #19AFFF;
     padding: 20px;
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 5em;
     color: #555;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+
 }
-
-/* Paragraphs inside the content */
-.education-window-content p {
-    margin-bottom: 10px;
-}
-
-
-
-
-
-
-
-
-
 
 /* _____________________________________________________________________________________ */
 
 
-
-
-
-
-
-
-
 /* Education Window */
+
 
 .education-window {
     background: linear-gradient(135deg, #051723, #19AFFF); /* Gradient background */
@@ -614,6 +598,7 @@ body {
     transform: scale(1.05); /* Slight zoom-in on hover */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
 }
+
 
 /* Header of the window */
 .education-window-header {
@@ -652,7 +637,9 @@ body {
 
 /* Hover effect for control buttons */
 .education-window-btn:hover {
-    background-color: #fff;
+    background-color: #fff !important;
+    transition: background-color 0.3s ease;
+
 }
 
 /* Close button (Red) */
@@ -670,7 +657,7 @@ body {
     background-color: #4dd1a1;
 }
 
-/* Content section of the window */
+
 .education-window-content {
     padding: 20px;
     font-size: 16px;
@@ -679,30 +666,28 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* On hover, make content background more prominent */
+
 .education-window:hover .education-window-content {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Add a slight blur effect when the window is hovered */
+
 .education-window:hover .education-window-title {
     filter: blur(1px);
 }
 
-/* Paragraphs inside the content */
+
 .education-window-content p {
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.5;
 }
 
-/* For better readability, let's make sure the content section has a bit of spacing */
 .education-window-content p:last-child {
     margin-bottom: 0;
 }
 
-/* Button inside content to make it more interactive */
-.education-window-content button {
+=.education-window-content button {
     padding: 8px 16px;
     background-color: #19AFFF;
     border: none;
@@ -719,7 +704,6 @@ body {
     color: #19AFFF !important;
 }
 
-/* Adjusting the controls (close, minimize, etc.) for smaller screens */
 @media (max-width: 600px) {
     .education-window-header {
         padding: 10px 12px;
