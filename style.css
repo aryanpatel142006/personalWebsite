@@ -278,26 +278,6 @@ body {
     transform-origin: 70% 70%;
 }
 
-
-
-
-.handlesWrapper{
-    display: flex;
-    align-items: center;
-    padding-top:0.5em;
-    padding-bottom:0.5em;
-    justify-content: space-evenly;
-    /* background-color: pink; */
-    font-size: 4em;
-    /* height: 10em; */
-
-
-}
-
-
-
-
-
 .quote {
     /* height: 4rem; */
     width: 100vw;
