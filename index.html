@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
 </head>
-<body>
+<body id="homeNav">
     <script>
         IconifyProviders = {
             local: {
@@ -33,12 +33,13 @@
             </div>
 
             <div class="navbar-main">
-                <a href="" id="First">Home &nbsp;</a>
-                <a href="">About &nbsp;</a>
-                <a href="">Experience &nbsp;</a>
-                <a href="">Education&nbsp;</a>
-                <a href="">Projects&nbsp;</a>
-                <a href="">Awards</a>
+                <a href="#" onclick="document.getElementById('homeNav').scrollIntoView();" id="First">Home &nbsp;</a>
+                <a href="#" onclick="document.getElementById('aboutMeNav').scrollIntoView();">About &nbsp;</a>
+                <a href="#" onclick="document.getElementById('educationNav').scrollIntoView();">Education &nbsp;</a>
+                <a href="#" onclick="document.getElementById('experienceNav').scrollIntoView();">Experience&nbsp;</a>
+                <a href="#" onclick="alert('Comming Soon!')">Projects&nbsp;</a>
+                <a href="#" onclick="alert('Comming Soon!')">Awards</a>
+
             </div>
         </div>
 
@@ -70,7 +71,7 @@
 
         </div>
         
-        <div class="quote">
+        <div class="quote" id="aboutMeNav">
             <div class="quote-content">
                 <!-- <p>
                     <p id="expereince"> Experience </p> &nbsp; is the name everyone gives to their mistakes and in order to be &nbsp; <p id="irreplacable"> Irreplacable </p> &nbsp; one must always be &nbsp; <p id="different">  Different </p> &nbsp; !
@@ -104,18 +105,17 @@
         <div class="aboutMeWrapper">
             <h1>About Me</h1>
             <div class="aboutMeContent">
-                <p>Yo!! whats up this is me, Aryan..... Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur blanditiis vel eum sint. Distinctio optio repellat, ab veniam blanditiis vel, libero nobis sit quod id incidunt nulla? Vitae, eaque natus.
-                Maxime repellat blanditiis voluptatibus deleniti alias magnam libero. Commodi, in, dignissimos, voluptatibus nihil cum incidunt culpa labore natus dolore autem placeat asperiores molestias aspernatur neque ullam harum? Unde, eveniet earum?
-                Illo excepturi hic voluptatibus repudiandae asperiores deserunt, fugiat blanditiis facere odio eum iusto ipsum vero in esse harum non sequi doloribus quo, nesciunt expedita qui alias minima sapiente incidunt. Sequi?
-                Numquam tempora quidem nesciunt nostrum, alias aut fuga natus dignissimos illum consectetur eum repellendus dolores quos ipsa reprehenderit quaerat eligendi quia soluta mollitia nemo nihil quis. Libero eligendi ipsam magni!
-                Magni obcaecati corrupti tempore culpa dolor consectetur harum doloribus, ducimus excepturi minima, quaerat illo modi officiis aperiam doloremque fuga debitis, vel repudiandae saepe! Quisquam consequuntur dolorum laboriosam maxime non recusandae.</p>
+                <p>Hi Again! I’m Aryan—a tech enthusiast, lifelong learner, and someone who believes there’s no better feeling than cracking a tough problem with the perfect solution (specially if you do it in the first try) or turning complex challenges into creative solutions. I am fueled by my ocean of curiosity and love for all things tech. I love diving into the unknown, learning new technologies, and applying them in creative ways to make a difference. 
+                </p>
+                <p>People often ask, “If money wasn’t a factor, what would you do?” My answer’s always the same: I’d still be here, working with computers and pushing forward in development. For me, this field isn’t just a career; it’s what makes me tick. When I’m not geeking out over code, you’ll probably find me brainstorming new ideas, diving into strategic planning, or just exploring how technology shapes the world around us.</p>
+                <p style="font-weight: bolder; font-size:1.5em;">THAT'S HOW MUCH I LOVE WHAT I DO !</p>
             </div>
             
         </div>
 
 
 
-        <div class="educationExperienceTimeline">
+        <div class="educationExperienceTimeline" id="educationNav">
             <div class="timeline-wrapper">
 
                 <!-- <h1 style="display: block; margin-left: 20em;"">EDUCATION</h1>
@@ -128,42 +128,24 @@
     
                     <!-- ARRTICLE BOX -->
                     <article class="timeline-box right custom-box-shadow-2">
-                        <div class="timeline-box-arrow-education"></div>
+                        <div id="arrow2" class="timeline-box-arrow-education"></div>
                         <!-- <div class="row"> -->
                             
                             <div style="padding: 2%">
                                 <div class="call-to-action-content">
                                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                                        <a href="javascript:void(0);" target="_blank" style="margin-left: 1%; pointer-events: none; font-size: 1.6em;"><b>Software Development Research Assistant</b></a>
-                                        <span style="font-size: 1.3em; color: gray; font-weight: 600;">Jan. 2024 - Present</span>
+                                        <a target="_blank" style="margin-left: 1%; pointer-events: none; font-size: 1.6em;"><b style="color:  #19AFFF !important; font-size: 1.5em; font-weight: bolder;">Rutgers University New Brunswick</b></a>
+                                        <span style="font-size: 1.3em; color: gray; font-weight: 600;">Sep. 2024 - 2028</span>
                                     </div>
                                     <p class="mb-0" align="left" style="color:black">
-                                        <a href="https://www.the-lavender-lab.com/" target="_blank" style="font-size: 1.1em; color: gray; font-weight: 600; margin-left: 1%">
-                                            Lavender Lab | College Park, MD
+                                        <a a target="_blank" style="font-size: 1.1em; color: gray; font-weight: 600; margin-left: 1%">
+                                            New Brunswick, NJ
                                         </a>
                                     </p>
                                     <ul style="list-style-position: inside; text-align: left; font-size: 1.35em;">
                                         <li style="margin-top: 0.5em; margin-bottom: 0.4em; text-indent: -1.5em; padding-left: 1.5em;">
-                                            <b>Automating critical lab processes</b> using <b>Python, JavaScript, and Microsoft Azure</b> cloud platform, 
-                                            <b>reducing manual workload by 56 hours per week</b> and improving overall lab efficiency.
-                                        </li>
-                                        <li style="margin-bottom: 0.4em; text-indent: -1.5em; padding-left: 1.5em;">
-                                            <b>Spearheading development</b> of an automated system distributing multiple linked surveys for 3 connected studies 
-                                            and integrated Qualtrics using APIs, so far <b>reducing manual work by 24 hours per week</b>.
-                                        </li>
-                                        <li style="margin-bottom: 0.4em; text-indent: -1.5em; padding-left: 1.5em;">
-                                            <b>Engineering backend</b> in <b>Python</b> using <b>Azure Functions</b> and <b>Azure SQL</b> to schedule emails (using 
-                                            <b>Azure Communication Service, ACS</b>) and texts (using <b>Twilio</b>) across 7 time zones and host <b>custom APIs</b> to handle 
-                                            <b>10,000+ participants</b>.
-                                        </li>
-                                        <li style="margin-bottom: 0.4em; text-indent: -1.5em; padding-left: 1.5em;">
-                                            Migrated lab data from Excel to <b>Azure SQL</b> and developed cross-platform interfaces with <b>Kivy</b> for data manipulation, 
-                                            <b>standardizing lab processes</b> for consistency and centralized access.
-                                        </li>
-                                        <li style="margin-bottom: 0.4em; text-indent: -1.5em; padding-left: 1.5em;">
-                                            Integrated <b>JavaScript</b> in <b>Qualtrics</b> survey platform for customizing survey behavior.
-                                        </li>
-                                                                                       
+                                            <b style="font-size: 1.3em;">Honors College:</b> Amongst the <b>Top 500</b> students from more then 36000 enrolling students.</li>  
+                                        <li><b>Top #15</b> Public Universitis.</li>                                             
                                     </ul>
                                 </div>  
                             </div>
@@ -176,36 +158,22 @@
                             <div style="padding: 2%">
                                 <div class="call-to-action-content">
                                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                                        <a href="javascript:void(0);" target="_blank" style="margin-left: 1%; pointer-events: none; font-size: 1.6em;"><b>Software Development Research Assistant</b></a>
-                                        <span style="font-size: 1.3em; color: gray; font-weight: 600;">Jan. 2024 - Present</span>
+                                        <a target="_blank" style="margin-left: 1%; pointer-events: none; font-size: 1.6em;"><b style="color:  #19AFFF !important; font-size: 1.5em; font-weight: bolder;" >Bhartiya Vidya Bhavans</b></a>
+                                        <span style="font-size: 1.3em; color: gray; font-weight: 600;">Apr. 2018 - 2024</span>
                                     </div>
                                     <p class="mb-0" align="left" style="color:black">
-                                        <a href="https://www.the-lavender-lab.com/" target="_blank" style="font-size: 1.1em; color: gray; font-weight: 600; margin-left: 1%">
-                                            Lavender Lab | College Park, MD
+                                        <a target="_blank" style="font-size: 1.1em; color: gray; font-weight: 600; margin-left: 1%">
+                                            Vadodara | Gujarat, India
                                         </a>
                                     </p>
                                     <ul style="list-style-position: inside; text-align: left; font-size: 1.35em;">
                                         <li style="margin-top: 0.5em; margin-bottom: 0.4em; text-indent: -1.5em; padding-left: 1.5em;">
-                                            <b>Automating critical lab processes</b> using <b>Python, JavaScript, and Microsoft Azure</b> cloud platform, 
-                                            <b>reducing manual workload by 56 hours per week</b> and improving overall lab efficiency.
+                                            <b>President Student Council:</b> Final Year of High School.
                                         </li>
                                         <li style="margin-bottom: 0.4em; text-indent: -1.5em; padding-left: 1.5em;">
-                                            <b>Spearheading development</b> of an automated system distributing multiple linked surveys for 3 connected studies 
-                                            and integrated Qualtrics using APIs, so far <b>reducing manual work by 24 hours per week</b>.
-                                        </li>
+                                            <b>Cultural Head:</b> Junior Year of High Shcool.</li>
                                         <li style="margin-bottom: 0.4em; text-indent: -1.5em; padding-left: 1.5em;">
-                                            <b>Engineering backend</b> in <b>Python</b> using <b>Azure Functions</b> and <b>Azure SQL</b> to schedule emails (using 
-                                            <b>Azure Communication Service, ACS</b>) and texts (using <b>Twilio</b>) across 7 time zones and host <b>custom APIs</b> to handle 
-                                            <b>10,000+ participants</b>.
-                                        </li>
-                                        <li style="margin-bottom: 0.4em; text-indent: -1.5em; padding-left: 1.5em;">
-                                            Migrated lab data from Excel to <b>Azure SQL</b> and developed cross-platform interfaces with <b>Kivy</b> for data manipulation, 
-                                            <b>standardizing lab processes</b> for consistency and centralized access.
-                                        </li>
-                                        <li style="margin-bottom: 0.4em; text-indent: -1.5em; padding-left: 1.5em;">
-                                            Integrated <b>JavaScript</b> in <b>Qualtrics</b> survey platform for customizing survey behavior.
-                                        </li>
-                                                                                       
+                                            <b>Editor School Magzine:</b> Sophmore Year of High Shcool. </li>                                        
                                     </ul>
                                 </div>  
                             </div>
@@ -213,21 +181,23 @@
     
                     
                 </div>
-            
-            
-            
-            
-            
-            a
+
             </div>
     
     <!-- Experience -->
-    
-    <div class="education-timeline">
-        <div class="titile"><h1>Experience</h1></div>
-    
-    
-        <div class="education-container">
+
+    <div class="education-main-window" id="experienceNav">
+        <div class="education-main-window-header">
+            <div class="education-window-controls">
+                <span class="education-main-window-btn close-btn"></span>
+                <span class="education-main-window-btn minimize-btn"></span>
+                <span class="education-main-window-btn maximize-btn"></span>
+            </div>
+            <div class="education-main-window-title">Experience</div>
+        </div>
+
+
+        <div class="education-container education-main-window-content">
     
             
             <div class="education-window">
@@ -237,12 +207,12 @@
                         <span class="education-window-btn minimize-btn"></span>
                         <span class="education-window-btn maximize-btn"></span>
                     </div>
-                    <div class="education-window-title">Bachelors in Computer Science</div>
+                    <div class="education-window-title">Python Developer Intern</div>
                 </div>
                 <div class="education-window-content">
-                    <p>Institution: University of XYZ</p>
-                    <p>Year: 2018 - 2022</p>
-                    <p>Details: Focused on software development and machine learning.</p>
+                    <p>Institution: CodeAlpha</p>
+                    <p>Year: Jan. 2024 - Jan. 2024</p>
+                    <p>Details: Focused on software development based on Python</p>
                 </div>
             </div>
     
@@ -253,29 +223,12 @@
                         <span class="education-window-btn minimize-btn"></span>
                         <span class="education-window-btn maximize-btn"></span>
                     </div>
-                    <div class="education-window-title">Masters in AI</div>
+                    <div class="education-window-title">International Business & Development Intern</div>
                 </div>
                 <div class="education-window-content">
-                    <p>Institution: University of ABC</p>
-                    <p>Year: 2022 - Present</p>
-                    <p>Details: Researching AI ethics and data privacy in machine learning systems.</p>
-                </div>
-            </div>
-    
-    
-            <div class="education-window">
-                <div class="education-window-header">
-                    <div class="education-window-controls">
-                        <span class="education-window-btn close-btn"></span>
-                        <span class="education-window-btn minimize-btn"></span>
-                        <span class="education-window-btn maximize-btn"></span>
-                    </div>
-                    <div class="education-window-title">Bachelors in Computer Science</div>
-                </div>
-                <div class="education-window-content">
-                    <p>Institution: University of XYZ</p>
-                    <p>Year: 2018 - 2022</p>
-                    <p>Details: Focused on software development and machine learning.</p>
+                    <p>Institution: Leadership Initiatives</p>
+                    <p>Year: Aug 2023 - Mar 2024</p>
+                    <p>Details: Helped small Business Owners in Bauchi, Nigeria to incubate their local Business from ground-up.</p>
                 </div>
             </div>
     
@@ -287,16 +240,50 @@
                         <span class="education-window-btn minimize-btn"></span>
                         <span class="education-window-btn maximize-btn"></span>
                     </div>
-                    <div class="education-window-title">Bachelors in Computer Science</div>
+                    <div class="education-window-title">Internshala Student Ambassador</div>
                 </div>
                 <div class="education-window-content">
-                    <p>Institution: University of XYZ</p>
-                    <p>Year: 2018 - 2022</p>
-                    <p>Details: Focused on software development and machine learning.</p>
+                    <p>Institution: Internshala</p>
+                    <p>Year: Aug 2023 - Dec 2023</p>
+                    <p>Details: Face of Company on Campus.</p>
                 </div>
             </div>
     
     
+            <div class="education-window">
+                <div class="education-window-header">
+                    <div class="education-window-controls">
+                        <span class="education-window-btn close-btn"></span>
+                        <span class="education-window-btn minimize-btn"></span>
+                        <span class="education-window-btn maximize-btn"></span>
+                    </div>
+                    <div class="education-window-title">International Ambassador</div>
+                </div>
+                <div class="education-window-content">
+                    <p>Institution: International Model United Nations Association (IMUNA)/p>
+                    <p>Year: Jul 2023 - Sep 2023</p>
+                    <p>Details: Helped students increase awarness and participation in MUNs.</p>
+                </div>
+            </div>
+    
+    
+            <div class="education-window">
+                <div class="education-window-header">
+                    <div class="education-window-controls">
+                        <span class="education-window-btn close-btn"></span>
+                        <span class="education-window-btn minimize-btn"></span>
+                        <span class="education-window-btn maximize-btn"></span>
+                    </div>
+                    <div class="education-window-title">Intern Campus Ambassador</div>
+                </div>
+                <div class="education-window-content">
+                    <p>Institution: WaySpire</p>
+                    <p>Year: Dec 2023 - Mar 2024</p>
+                    <p>Details: Face of Company on Campus, helping students break into tech,learning from, top instutions like IITs.</p>
+                </div>
+            </div>
+    
+<!--     
             <div class="education-window">
                 <div class="education-window-header">
                     <div class="education-window-controls">
@@ -312,30 +299,14 @@
                     <p>Details: Focused on software development and machine learning.</p>
                 </div>
             </div>
-    
-    
-            <div class="education-window">
-                <div class="education-window-header">
-                    <div class="education-window-controls">
-                        <span class="education-window-btn close-btn"></span>
-                        <span class="education-window-btn minimize-btn"></span>
-                        <span class="education-window-btn maximize-btn"></span>
-                    </div>
-                    <div class="education-window-title">Bachelors in Computer Science</div>
-                </div>
-                <div class="education-window-content">
-                    <p>Institution: University of XYZ</p>
-                    <p>Year: 2018 - 2022</p>
-                    <p>Details: Focused on software development and machine learning.</p>
-                </div>
-            </div>
-        </div>
+        </div> -->
     
     </div>
-    
-        </div>
 
-
+<!-- 
+    <div class="projectWrapper">
+        <h1>Projects</h1>
+    </div> -->
 
     </main>
     <footer style="height: 60px; background-color: black;">

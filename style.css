@@ -5,6 +5,10 @@
     /* font-family: Arial, Helvetica, sans-serif; */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* FONTS */
 
 @font-face {
@@ -120,12 +124,20 @@ body {
 
 
 
-
-
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
 /* HOME */
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
+/*  */
 
+
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
 /* main */
-
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
 
 /* main{
     display: flex;
@@ -260,7 +272,7 @@ body {
     transform-origin: 70% 70%;
 }
 
-.content span:hover{
+.content-area:hover span{
     display: inline-block;
     animation: wave 2s infinite;
     transform-origin: 70% 70%;
@@ -368,11 +380,19 @@ body {
 
 .educationExperienceTimeline{
     /* background:linear-gradient(#051723,#19AFFF) */
+    /* background-color: #F8F9FA; */
+    /* background-color:  #E8F0FF; */
 
 }
 
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
+
 
 /* Education TIMELINE */
+
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
 
 .timeline-wrapper{
     /* min-height: 60rem; */
@@ -387,8 +407,9 @@ body {
     /* background-color: #00A9E0; */
     /* z-index: -5; */
     /* flex-wrap: wrap; */
+    
     justify-content: center;
-    background-color: transparent;
+    
 }
 
 .timeline-wrapper h1 {
@@ -398,18 +419,21 @@ body {
     color: #C0C0C0;
     /* background-color: pink; */
     /* height: fit-content; */
-    padding: 1.5em;
+    padding: 0.8em;
     /* margin-bottom: 2em; */
 }
 
 .timeline-content-box, .education-timeline-content-box{
+    margin-inline: 2.5%;
+    border-radius: 12px;
+    padding: 10px;
     display: flex;
     flex-wrap: nowrap;
     /* margin-top: 0px;
     margin-bottom: 0px; */
     justify-content: center;
     /* background-color: black; */
-    background-color: transparent;
+    background-color: #19AFFF;
 }
 
 
@@ -425,7 +449,7 @@ body {
 
 .timeline-box {
     display: flex;
-    height: fit-content;
+    /* height: fit-content; */
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.04);
     border: 5px solid #051723;
     border-radius: 10px;
@@ -437,43 +461,109 @@ body {
     margin-bottom: 30px;
     background: #FFF;
 }
-.timeline-box-arrow-education {
-    transform: rotate(45deg);
-    content: '';
+.timeline-box-arrow-education-nb {
+    /* transform: rotate(45deg); */
+    rotate: 45deg;
+    /* content: ''; */
     display: block;
     background: #FFF;
-    border: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
     /* border-left: 5px solid #051723;
     border-bottom: 5px solid #051723; */
-    float: left;
+    /* float: left; */
     height: 29px;
     width: 39px;
     margin-top: 28px;
-    margin-left: -22px;
+    margin-left: -25px;
     z-index: 0;
 }
 
+.timeline-box-arrow-education-na {
+    /* background-color: #19AFFF; */
+    background: radial-gradient(#19AFFF,#051723);
+    height: 9em;
+    width: 1.5em;
+    rotate: 45deg;
+    margin-top: -3em;
+    margin-left:1em ;
+}
 
+
+
+.timeline-box {
+    
+    position: relative;
+    display: flex;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.04);
+    border: 5px solid #051723;
+    border-radius: 10px;
+    margin: 20px 10px 10px 10px;
+    padding: 10px;
+    width: 90%;
+    float: left;
+    background: #FFF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Transition for entire box */
+}
+
+.timeline-box-arrow-education {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 20px solid #19AFFF; /* Arrow color */
+    position: absolute;
+    /* top: 50%; */
+
+    margin-top: -25px;
+    margin-left: 30px;
+    left: -25px;  /* Align arrow with the box */
+    transform: translateY(-50%);  /* Center the arrow vertically */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);  /* Soft shadow for the arrow */
+    background-color: #051723;
+}
+
+.timeline-box-arrow-education:hover {
+    transform: scale(1.1) rotate(10deg);  /* Slight scale + rotate effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  /* Stronger shadow on hover */
+    z-index: -1;
+
+}
+
+/* Additional animation for smooth rotation */
+@keyframes rotateArrow {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.timeline-box:hover .timeline-box-arrow-education {
+    /* animation: rotateArrow 0.6s ease-in-out; */
+
+}
+
+/* Optionally, apply hover effect to the entire box */
+.timeline-box:hover {
+    transform: scale(1.05);  /* Slight zoom-in on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);  /* Enhanced shadow */
+}
+
+
+#arrow2{
+    width:2.5em;
+}
+
+
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
 
 
 /* Experience TIMELINE */
 
-.education-timeline{
-    background-color: #19AFFF;
-    border-radius: 2rem;
-    border: 2px solid white;
-    padding-bottom: 10%;
-    background-color: transparent;
-}
-.education-timeline h1{
-    /* background-color: pink; */
-    font-size: 3em;
-    /* margin-top: 3rem; */
-    padding: 1.5em;
-    text-align: center;
-    display: block;
-}
-/* Container for expereience windows */
+/* _____________________________________________________________________________________ */
+/* _____________________________________________________________________________________ */
+
 
 
 .education-container {
@@ -484,125 +574,124 @@ body {
     align-items: center;
     /* flex-direction: column; */
     gap: 20px;
-    
-
 }
-
-
-/* Styling for each education "window" */
-.education-window {
-    height: fit-content;
+.education-main-window {
+    margin-inline: 5%;
+    /* width: 90%; */
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    overflow: hidden;
+    /* overflow: hidden; */
     border: 1px solid #ccc;
 }
 
-/* Header of the window with controls */
-.education-window-header {
+
+.education-main-window-header {
+    border-radius: 12px;
     background: #f1f1f1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-/* Controls buttons for close, minimize, maximize */
-.education-window-controls {
+.education-main-window-controls {
     display: flex;
     gap: 10px;
 }
 
-/* Generic button style for the controls */
-.education-window-btn {
-    width: 12px;
-    height: 12px;
+.education-main-window-btn {
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    background-color: #d1d1d1;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-/* Hover effects for the buttons */
-.education-window-btn:hover {
-    background-color: #5e5e5e;
-}
 
-/* Specific button styles for close, minimize, and maximize */
-.education-window-btn.close-btn {
+
+.education-main-window-btn.close-btn {
     background-color: #f28d8d; /* Red */
 }
 
-.education-window-btn.minimize-btn {
+.education-main-window-btn.minimize-btn {
     background-color: #f2cc4d; /* Yellow */
 }
 
-.education-window-btn.maximize-btn {
+.education-main-window-btn.maximize-btn {
     background-color: #4dd1a1; /* Green */
 }
 
-/* Title of the window (degree name) */
-.education-window-title {
-    font-size: 14px;
+
+.education-main-window-btn:hover {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #5e5e5e;
+    /* border-radius: 0px; */
+}
+
+
+.education-main-window-title {
+    font-size: 3rem;
     font-weight: bold;
     color: #333;
     flex-grow: 1;
     text-align: center;
 }
 
-/* Content section of the window */
-.education-window-content {
+
+.education-main-window-content {
+    /* background-color: #E8F0FF; */
+    background-color: #19AFFF;
     padding: 20px;
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 5em;
     color: #555;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+
 }
-
-/* Paragraphs inside the content */
-.education-window-content p {
-    margin-bottom: 10px;
-}
-
-
-
-
-
-
-
-
-
 
 /* _____________________________________________________________________________________ */
 
 
-
-
-
-
-
-
-
 /* Education Window */
+
 
 .education-window {
     background: linear-gradient(135deg, #051723, #19AFFF); /* Gradient background */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
     width: 300px;
+    /* min-height: 250px; */
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 30px;
     position: relative;
     font-family: "CaveatBrush-Regular", sans-serif;
     color: #fff;
+
 }
 
-/* On hover, scale up the window and add a stronger shadow */
 .education-window:hover {
-    transform: scale(1.05); /* Slight zoom-in on hover */
+    /* min-height: 300px; */
+    transform: scale(1.5); /* Slight zoom-in on hover */
+    z-index: 5;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    position: relative;
+    /* top: 100px;
+    left: 100px; */
+    transition: ease-in-out;
+    transition-duration: 1s;
+
+
 }
+
+
 
 /* Header of the window */
 .education-window-header {
@@ -641,7 +730,9 @@ body {
 
 /* Hover effect for control buttons */
 .education-window-btn:hover {
-    background-color: #fff;
+    background-color: #fff !important;
+    transition: background-color 0.3s ease;
+
 }
 
 /* Close button (Red) */
@@ -659,8 +750,9 @@ body {
     background-color: #4dd1a1;
 }
 
-/* Content section of the window */
+
 .education-window-content {
+    min-height: 200px;
     padding: 20px;
     font-size: 16px;
     color: #C0C0C0; /* Light gray for content */
@@ -668,29 +760,28 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* On hover, make content background more prominent */
+
 .education-window:hover .education-window-content {
+    min-height: 200px;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Add a slight blur effect when the window is hovered */
+
 .education-window:hover .education-window-title {
     filter: blur(1px);
 }
 
-/* Paragraphs inside the content */
+
 .education-window-content p {
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.5;
 }
 
-/* For better readability, let's make sure the content section has a bit of spacing */
 .education-window-content p:last-child {
     margin-bottom: 0;
 }
 
-/* Button inside content to make it more interactive */
 .education-window-content button {
     padding: 8px 16px;
     background-color: #19AFFF;
@@ -708,7 +799,6 @@ body {
     color: #19AFFF !important;
 }
 
-/* Adjusting the controls (close, minimize, etc.) for smaller screens */
 @media (max-width: 600px) {
     .education-window-header {
         padding: 10px 12px;
@@ -741,8 +831,27 @@ body {
     transition: all 0.3s ease; /* Smooth transition effect */
 }
 
+
 .education-window-content button:hover {
     background-color: #051723; /* Dark background when hovered */
     color: #19AFFF; /* Bright cyan text when hovered */
     transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+
+
+.projectWrapper{
+    height: 500px;
+    /* background-color: #19AFFF; */
+    background: radial-gradient(#051723,#19AFFF);
+
+    border-radius: 12px;
+    margin: 1em;
+}
+
+.projectWrapper h1{
+    text-align: center;
+    font-size: 3em;
+    padding: 1em;
+    color: white;
 }
