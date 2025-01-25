@@ -5,6 +5,10 @@
     /* font-family: Arial, Helvetica, sans-serif; */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* FONTS */
 
 @font-face {
@@ -268,7 +272,7 @@ body {
     transform-origin: 70% 70%;
 }
 
-.content span:hover{
+.content-area:hover span{
     display: inline-block;
     animation: wave 2s infinite;
     transform-origin: 70% 70%;
@@ -403,6 +407,7 @@ body {
     /* background-color: #00A9E0; */
     /* z-index: -5; */
     /* flex-wrap: wrap; */
+    
     justify-content: center;
     
 }
@@ -414,14 +419,14 @@ body {
     color: #C0C0C0;
     /* background-color: pink; */
     /* height: fit-content; */
-    padding: 1.5em;
+    padding: 0.8em;
     /* margin-bottom: 2em; */
 }
 
 .timeline-content-box, .education-timeline-content-box{
     margin-inline: 2.5%;
     border-radius: 12px;
-    padding-inline: 10px;
+    padding: 10px;
     display: flex;
     flex-wrap: nowrap;
     /* margin-top: 0px;
@@ -444,7 +449,7 @@ body {
 
 .timeline-box {
     display: flex;
-    height: fit-content;
+    /* height: fit-content; */
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.04);
     border: 5px solid #051723;
     border-radius: 10px;
@@ -456,20 +461,97 @@ body {
     margin-bottom: 30px;
     background: #FFF;
 }
-.timeline-box-arrow-education {
-    transform: rotate(45deg);
-    content: '';
+.timeline-box-arrow-education-nb {
+    /* transform: rotate(45deg); */
+    rotate: 45deg;
+    /* content: ''; */
     display: block;
     background: #FFF;
-    border: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
     /* border-left: 5px solid #051723;
     border-bottom: 5px solid #051723; */
-    float: left;
+    /* float: left; */
     height: 29px;
     width: 39px;
     margin-top: 28px;
-    margin-left: -22px;
+    margin-left: -25px;
     z-index: 0;
+}
+
+.timeline-box-arrow-education-na {
+    /* background-color: #19AFFF; */
+    background: radial-gradient(#19AFFF,#051723);
+    height: 9em;
+    width: 1.5em;
+    rotate: 45deg;
+    margin-top: -3em;
+    margin-left:1em ;
+}
+
+
+
+.timeline-box {
+    
+    position: relative;
+    display: flex;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.04);
+    border: 5px solid #051723;
+    border-radius: 10px;
+    margin: 20px 10px 10px 10px;
+    padding: 10px;
+    width: 90%;
+    float: left;
+    background: #FFF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Transition for entire box */
+}
+
+.timeline-box-arrow-education {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 20px solid #19AFFF; /* Arrow color */
+    position: absolute;
+    /* top: 50%; */
+
+    margin-top: -25px;
+    margin-left: 30px;
+    left: -25px;  /* Align arrow with the box */
+    transform: translateY(-50%);  /* Center the arrow vertically */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);  /* Soft shadow for the arrow */
+    background-color: #051723;
+}
+
+.timeline-box-arrow-education:hover {
+    transform: scale(1.1) rotate(10deg);  /* Slight scale + rotate effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  /* Stronger shadow on hover */
+    z-index: -1;
+
+}
+
+/* Additional animation for smooth rotation */
+@keyframes rotateArrow {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.timeline-box:hover .timeline-box-arrow-education {
+    /* animation: rotateArrow 0.6s ease-in-out; */
+
+}
+
+/* Optionally, apply hover effect to the entire box */
+.timeline-box:hover {
+    transform: scale(1.05);  /* Slight zoom-in on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);  /* Enhanced shadow */
+}
+
+
+#arrow2{
+    width:2.5em;
 }
 
 
@@ -585,19 +667,30 @@ body {
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
     width: 300px;
+    /* min-height: 250px; */
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 30px;
     position: relative;
     font-family: "CaveatBrush-Regular", sans-serif;
     color: #fff;
+
 }
 
-/* On hover, scale up the window and add a stronger shadow */
 .education-window:hover {
-    transform: scale(1.05); /* Slight zoom-in on hover */
+    /* min-height: 300px; */
+    transform: scale(1.5); /* Slight zoom-in on hover */
+    z-index: 5;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    position: relative;
+    /* top: 100px;
+    left: 100px; */
+    transition: ease-in-out;
+    transition-duration: 1s;
+
+
 }
+
 
 
 /* Header of the window */
@@ -659,6 +752,7 @@ body {
 
 
 .education-window-content {
+    min-height: 200px;
     padding: 20px;
     font-size: 16px;
     color: #C0C0C0; /* Light gray for content */
@@ -668,6 +762,7 @@ body {
 
 
 .education-window:hover .education-window-content {
+    min-height: 200px;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -735,6 +830,7 @@ body {
     cursor: pointer; /* Pointer cursor on hover */
     transition: all 0.3s ease; /* Smooth transition effect */
 }
+
 
 .education-window-content button:hover {
     background-color: #051723; /* Dark background when hovered */
