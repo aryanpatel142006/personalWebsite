@@ -576,6 +576,7 @@ body {
     gap: 20px;
 }
 .education-main-window {
+    margin-top: 2em;
     margin-inline: 5%;
     /* width: 90%; */
     background: #fff;
