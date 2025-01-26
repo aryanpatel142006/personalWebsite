@@ -53,7 +53,7 @@ body {
     display: flex;
     top: 0;
     height: 6.5rem;
-    width: 100vw;
+    /* width: 100vw; */
     color: white;
     background-color: black;
 }
@@ -428,7 +428,7 @@ body {
 
 .quote {
     /* height: 4rem; */
-    width: 100vw;
+    /* width: 100vw; */
     display: flex;
     justify-content: center;
 }
